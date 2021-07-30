@@ -134,15 +134,15 @@ echo $_SESSION['email'];
                 </div>
                 <div class="input-box">
                     <span class="detail">Linkedin</span>
-                    <input type="text" class="input" placeholder="Enter your Linkedin" name="ldn" required>
+                    <input type="text" class="input" placeholder="Enter Linkedin username" name="ldn" required>
                 </div>
                 <div class="input-box">
                     <span class="detail">Facebook</span>
-                    <input type="text" class="input" placeholder="Enter your Facebook" name="fbook" required>
+                    <input type="text" class="input" placeholder="Enter Facebook username " name="fbook" required>
                 </div>
                 <div class="input-box">
                     <span class="detail">Instagram</span>
-                    <input type="text" class="input" placeholder="Enter your Instagram" name="insta" required>
+                    <input type="text" class="input" placeholder="Enter Instagram username " name="insta" required>
                 </div>
 
                 <button class="btn"> Submit </button>

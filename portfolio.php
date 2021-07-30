@@ -2,31 +2,45 @@
 require('data.php');
 session_start();
 $email=$_SESSION['email'];
+
+//Fetching Data from home
 $query1= "SELECT * FROM `home` WHERE `email`= '$email'";
-$query2= "SELECT * FROM `about` WHERE `email`= '$email'";
-$query3= "SELECT * FROM `education` WHERE `email`= '$email'";
-$query4= "SELECT * FROM `skills` WHERE `email`= '$email'";
-$query5= "SELECT * FROM `project` WHERE `email`= '$email'";
-$query6= "SELECT * FROM `achievement`WHERE `email`= '$email'";
-$query7= "SELECT * FROM `contact` WHERE `email`= '$email'";
-$query8= "SELECT * FROM `reg-data` WHERE `email`= '$email'";
-
 $run1=mysqli_query($conn,$query1);
-$run2=mysqli_query($conn,$query2);
-$run3=mysqli_query($conn,$query3);
-$run4=mysqli_query($conn,$query4);
-$run5=mysqli_query($conn,$query5);
-$run6=mysqli_query($conn,$query6);
-$run7=mysqli_query($conn,$query7);
-$run8=mysqli_query($conn,$query8);
-
 $user_data1=mysqli_fetch_array($run1);
+
+//Fetching Data from about
+$query2= "SELECT * FROM `about` WHERE `email`= '$email'";
+$run2=mysqli_query($conn,$query2);
 $user_data2=mysqli_fetch_array($run2);
+
+//Fetching Data from education
+$query3= "SELECT * FROM `education` WHERE `email`= '$email'";
+$run3=mysqli_query($conn,$query3);
 $user_data3=mysqli_fetch_array($run3);
+
+//Fetching Data from skills
+$query4= "SELECT * FROM `skills` WHERE `email`= '$email'";
+$run4=mysqli_query($conn,$query4);
 $user_data4=mysqli_fetch_array($run4);
+
+//Fetching Data from project
+$query5= "SELECT * FROM `project` WHERE `email`= '$email'";
+$run5=mysqli_query($conn,$query5);
 $user_data5=mysqli_fetch_array($run5);
+
+//Fetching Data from achievements
+$query6= "SELECT * FROM `achievement`WHERE `email`= '$email'";
+$run6=mysqli_query($conn,$query6);
 $user_data6=mysqli_fetch_array($run6);
+
+//Fetching Data from contacts
+$query7= "SELECT * FROM `contact` WHERE `email`= '$email'";
+$run7=mysqli_query($conn,$query7);
 $user_data7=mysqli_fetch_array($run7);
+
+//Fetching Data from registered data
+$query8= "SELECT * FROM `reg-data` WHERE `email`= '$email'";
+$run8=mysqli_query($conn,$query8);
 $user_data8=mysqli_fetch_array($run8);
 
 ?>
@@ -53,10 +67,14 @@ $user_data8=mysqli_fetch_array($run8);
 
 <header>
 
+    <!-- User Photo -->
+
     <div class="user">
-        <img src="images/pic.jpg" alt="">
+        <img src="images/duser.png" alt="">
         <h3 class="name"><?=$user_data1['name']?></h3>
     </div>
+
+    <!-- Side Navbar -->
 
     <nav class="navbar">
         <ul>
@@ -82,7 +100,7 @@ $user_data8=mysqli_fetch_array($run8);
     <h1>I'm <span><?=$user_data1['name']?></span></h1>
     <p>I am a passionate <span><?=$user_data2['post']?></span> </p>
 
-    <a href="#about"><button class="btn">About me <i class="fas fa-user"></i></button></a>
+    <a href="#p_about"><button class="btn">About me <i class="fas fa-user"></i></button></a>
 
 
 </section>
@@ -95,7 +113,7 @@ $user_data8=mysqli_fetch_array($run8);
 
 <div class="row">
     <div class="abt_para">
-        <h3><?=$user_data['abtpara']?></h3>
+        <h3><?=$user_data2['abtpara']?></h3>
 
     </div>
 
@@ -105,7 +123,6 @@ $user_data8=mysqli_fetch_array($run8);
         <h3> <span> Qualification : </span> <?=$user_data2['qualification']?> </h3>
         <h3> <span> Post : </span> <?=$user_data2['post']?> </h3>
         <h3> <span> Languages : </span> <?=$user_data2['language']?> </h3>
-        <a href="#"><button class="btn"> download CV <i class="fas fa-download"></i> </button></a>
     </div>
 
    
@@ -232,21 +249,12 @@ $user_data8=mysqli_fetch_array($run8);
 
 </section>
 
-<!-- contact section ends -->
-
 
 <!-- scroll top button  -->
 
 <a href="#p_home" class="top">
     <i class="fas fa-arrow-alt-circle-up fa-3x"></i>
 </a>
-
-
-
-
-
-
-
 
 
 

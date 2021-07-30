@@ -101,7 +101,8 @@ header .user img{
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 1rem;
-    border:.7rem solid var(--green);
+    background: linear-gradient(to bottom, #b7dc4d,#004d00);;
+    border:5rem solid linear-gradient(to bottom, #b7dc4d,#004d00);;
 }
 
 header .user .name{

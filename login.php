@@ -35,8 +35,8 @@
             <img src="images/reg_1.png" alt="">
         </div>
         <div class="right-side">
-            <h2>Register</h2>
-            <h3>Already a Member?<a href="login.php">Log In</a></h3>
+            <h2>Login</h2>
+            <h3>New? Sign Up. <a href="registration.php">Register</a></h3>
             
             <form action="login-process.php" method="post" enctype="multipart/form-data" id="rform">
             
@@ -49,7 +49,7 @@
                     <input type="password" class="finput" placeholder="Enter your Password" name="password_1" required>
                 </div>
             
-                <button class="btn">Register</button>
+                <button class="btn">Login</button>
             
             </form>
             
