@@ -43,6 +43,7 @@
         header('Location:details.php');
 
         } else {
+            
 
             header('Location:login.php?message=Wrong Password');
 

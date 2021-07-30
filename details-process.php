@@ -133,7 +133,7 @@
         $insta = $_POST['insta'];
     }
     if(isset($_POST['ldn'])) {
-        $linkedin = $_POST['ldn'];
+        $linkedn = $_POST['ldn'];
     }
     if(isset($_POST['fbook'])) {
         $fb = $_POST['fbook'];
@@ -141,25 +141,25 @@
 
     
   
-            $insertUser_1 = "INSERT INTO home(`name`) VALUES('$name')";
+            $insertUser_1 = "INSERT INTO `home`(`email`,`name`) VALUES('$email','$name')";
             $insertUserStatus_1 = mysqli_query($conn,$insertUser_1) or die(mysqli_error($conn));
             
-            $insertUser_2 = "INSERT INTO about(abtpara,age,qualification,post,`language`) VALUES('$abt_para','$age','$qualify','$post','$lang')";
+            $insertUser_2 = "INSERT INTO `about`(`email`,`abtpara`,`age`,`qualification`,`post`,`language`) VALUES('$email','$abt_para','$age','$qualify','$post','$lang')";
             $insertUserStatus_2 = mysqli_query($conn,$insertUser_2) or die(mysqli_error($conn));
 
-            $insertUser_3 =  "INSERT INTO education(year1,year2,year3,sclname,hsname,colname,colb) VALUES('$y1','$y2','$y3','$scl','$hs','$ug','$ugb')";
+            $insertUser_3 =  "INSERT INTO `education`(`email`,`year1`,`year2`,`year3`,`sclname`,`hsname`,`colname`,`colb`) VALUES('$email','$y1','$y2','$y3','$scl','$hs','$ug','$ugb')";
             $insertUserStatus_3 = mysqli_query($conn,$insertUser_3) or die(mysqli_error($conn));
 
-            $insertUser_4 =  "INSERT INTO skills(advance,`intermediate`,novice) VALUES('$adv','$itmdt','$nov')";
+            $insertUser_4 =  "INSERT INTO `skills`(`email`,`advance`,`intermediate`,`novice`) VALUES('$email','$adv','$itmdt','$nov')";
             $insertUserStatus_4 = mysqli_query($conn,$insertUser_4) or die(mysqli_error($conn));
 
-            $insertUser_5 =  "INSERT INTO project(project1,project2,project3) VALUES('$p1','$p2','$p3')";
+            $insertUser_5 =  "INSERT INTO `project`(`email`,`project1`,`project2`,`project3`) VALUES('$email','$p1','$p2','$p3')";
             $insertUserStatus_5 = mysqli_query($conn,$insertUser_5) or die(mysqli_error($conn));
 
-            $insertUser_6 =  "INSERT INTO achievement(achievement1,achievement2) VALUES('$e1','$e2')";
+            $insertUser_6 =  "INSERT INTO `achievement`(`email`,`achievement1`,`achievement2`) VALUES('$email','$e1','$e2')";
             $insertUserStatus_6 = mysqli_query($conn,$insertUser_6) or die(mysqli_error($conn));
 
-            $insertUser_7 =  "INSERT INTO contact(mail,instagram,linkedin,facebook) VALUES('$mail','$insta','$linkedn','$fb')";
+            $insertUser_7 =  "INSERT INTO `contact`(`email`,`instagram`,`linkedin`,`facebook`) VALUES('$email','$insta','$linkedn','$fb')";
             $insertUserStatus_7 = mysqli_query($conn,$insertUser_7) or die(mysqli_error($conn));
 
             if($insertUserStatus_1 && $insertUserStatus_2 && $insertUserStatus_3 && $insertUserStatus_4 && $insertUserStatus_5 && $insertUserStatus_6 && $insertUserStatus_7) { // if the user is successfully registered!
