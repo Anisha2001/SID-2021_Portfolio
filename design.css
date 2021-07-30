@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+
+}
+
+body{
+    -webkit-box-align: center;
+    align-items: center;
+    background: -webkit-linear-gradient(to right, #b7dc4d,#004d00);
+    background: linear-gradient(to right, #b7dc4d,#004d00);
+    display: -webkit-box;
+    display: flex;
+    font-family: 'Nunito', sans-serif;
+    height: 100vh;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+img{
+    height: fit-content;
+    width: fit-content;
+}
+
+.wrapper{
+    background: #fff;
+    box-shadow:3px 3px 2px #222 ;
+    border-radius: .75em;
+    padding: 4em 2em;
+    width: 60em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left-side {
+    width: 50%;
+    padding: 03em;
+}
+
+.right-side h2{
+    color: #222;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.right-side h3{
+    color: #222;
+    font-size: 20px;
+    text-align: center;
+}
+
+form{
+    margin:2em 0;
+}
+
+.form-row{
+    display: -webkit-box;
+    display: flex;
+    margin:15px;
+    align-items: center;
+    position: relative;
+}
+
+.form-row span{
+    background: #fff;
+    color: #777;
+    font-weight: 400;
+    left: 1em;
+    padding: 0 0.5em;
+    width: 100%;
+    outline: none;
+    border: 1px #b7dc4d;
+    font-size: 15px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.finput:focus{
+    border:2px solid #b7dc4d;
+}
+
+/* Submit Button */
+
+.btn{  
+    padding: 10px;
+    background: linear-gradient(to top left, #b7dc4d,#004d00) ;
+    color:#fff;
+    cursor: pointer;
+    margin-top: 2px;
+    margin-left: 23px;
+    font-size: 15px;
+    border-radius: 10px;
+    align-items: center;
+    
+}
+
+.btn:hover{
+    background:linear-gradient(to top left, #b7dc4d,#004d00) ;
+}
+
+@media (max-width:767px){
+    .wrapper{
+        flex-direction: column;
+    }
+    .right-side {
+        width: 80%;
+        align-items: center;
+        padding:10px;
+    }
+
+    .left-side{
+        width: 100%;
+        align-items: center;
+        padding: 10px;
+    }
+
+}
+
+
